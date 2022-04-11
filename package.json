@@ -1,0 +1,43 @@
+{
+  "name": "@alexbogovich/key-emitter",
+  "version": "0.0.0",
+  "packageManager": "pnpm@6.32.3",
+  "description": "",
+  "license": "MIT",
+  "author": "Alex Bogovich <bogovich.alexander@gmail.com>",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "test": "vitest",
+    "build": "unbuild"
+  },
+  "dependencies": {
+    "nanoevents": "^6.0.2"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.180",
+    "vitest": "^0.9.0",
+    "typescript": "^4.6.3",
+    "unbuild": "^0.7.2"
+  }
+}
